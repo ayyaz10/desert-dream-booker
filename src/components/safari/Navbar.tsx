@@ -11,6 +11,9 @@ const navLinks = [
   { name: "FAQ", href: "#faq" },
 ];
 
+const WHATSAPP_NUMBER = "971501234567";
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Dubai Desert Safari with Visit White Desert. Can you help me?";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,14 +26,21 @@ const Navbar = () => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openWhatsApp = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-amber-600">
-              🏜️ Desert Safari
+            <span className="text-xl font-bold">
+              <span className="text-amber-600">Visit</span>
+              <span className="text-foreground">White</span>
+              <span className="text-amber-500">Desert</span>
             </span>
           </div>
 
@@ -50,8 +60,8 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              onClick={() => scrollTo("#booking")}
-              className="bg-amber-500 hover:bg-amber-600 text-black font-semibold"
+              onClick={openWhatsApp}
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold"
             >
               Book Now
             </Button>
@@ -80,8 +90,8 @@ const Navbar = () => {
                 </button>
               ))}
               <Button 
-                onClick={() => scrollTo("#booking")}
-                className="bg-amber-500 hover:bg-amber-600 text-black font-semibold mt-2"
+                onClick={openWhatsApp}
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold mt-2"
               >
                 Book Now
               </Button>

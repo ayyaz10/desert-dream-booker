@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
-const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Desert Safari. Can you help me?";
+const WHATSAPP_NUMBER = "971501234567"; // Dubai WhatsApp number
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Dubai Desert Safari with Visit White Desert. Can you help me?";
 
 const CTASection = () => {
   const openWhatsApp = () => {
@@ -21,10 +21,10 @@ const CTASection = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Ready for Your Desert Adventure?
+          Ready for Your Dubai Desert Adventure?
         </h2>
         <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-          Book now and get 15% off on all packages. Limited time offer for early birds!
+          Book with Visit White Desert today and get 15% off on all packages! Limited time offer.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +48,7 @@ const CTASection = () => {
         </div>
         
         <p className="mt-8 text-white/60 text-sm">
-          ⭐ 4.9/5 rating from 10,000+ happy travelers
+          ⭐ 4.9/5 rating from 10,000+ happy travelers • TripAdvisor Travellers' Choice
         </p>
       </div>
     </section>
