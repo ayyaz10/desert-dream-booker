@@ -5,32 +5,32 @@ const features = [
   {
     icon: Shield,
     title: "Safety First",
-    description: "Professional drivers and guides with extensive desert experience ensure your safety throughout the journey.",
+    description: "Professional Dubai-licensed drivers with extensive desert experience ensure your safety throughout the journey.",
   },
   {
     icon: Sparkles,
-    title: "Premium Experience",
-    description: "Luxury vehicles, gourmet dining, and first-class amenities for an unforgettable adventure.",
+    title: "Luxury Experience",
+    description: "Premium Land Cruisers, gourmet Arabic dining, and VIP amenities for an unforgettable Dubai adventure.",
   },
   {
     icon: Heart,
     title: "Personalized Service",
-    description: "Customizable packages tailored to your preferences, from adventure seekers to peaceful retreats.",
+    description: "Customizable packages tailored to your preferences, from adventure seekers to romantic desert getaways.",
   },
   {
     icon: Compass,
-    title: "Expert Guides",
-    description: "Local experts who know every dune and hidden gem, sharing authentic cultural experiences.",
+    title: "Expert Local Guides",
+    description: "Emirati guides who know every dune and hidden gem, sharing authentic Dubai culture and traditions.",
   },
   {
     icon: Camera,
-    title: "Photo Opportunities",
-    description: "Stunning locations and golden hour timing for picture-perfect desert memories.",
+    title: "Insta-Worthy Moments",
+    description: "Stunning Dubai desert locations and golden hour timing for picture-perfect memories.",
   },
   {
     icon: Utensils,
-    title: "Authentic Cuisine",
-    description: "Traditional Arabic BBQ and refreshments served under the stars in authentic Bedouin style.",
+    title: "Authentic Arabic Cuisine",
+    description: "Traditional BBQ dinner with shisha, Arabic coffee, and dates served in authentic Bedouin style camps.",
   },
 ];
 
@@ -40,13 +40,13 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-            Why Choose Us
+            Why Choose Visit White Desert
           </span>
           <h2 className="text-4xl font-bold mt-2 mb-4">
-            The Ultimate Desert Experience
+            The Ultimate Dubai Desert Experience
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We go beyond ordinary safaris to deliver extraordinary moments that last a lifetime.
+            We go beyond ordinary safaris to deliver extraordinary moments in Dubai's magnificent desert.
           </p>
         </div>
 

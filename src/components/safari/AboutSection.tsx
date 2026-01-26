@@ -1,10 +1,10 @@
 import { Award, Users, MapPin, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "50,000+", label: "Happy Travelers" },
-  { icon: MapPin, value: "15+", label: "Desert Locations" },
-  { icon: Award, value: "10+", label: "Years Experience" },
-  { icon: Clock, value: "24/7", label: "Support Available" },
+  { icon: Users, value: "50,000+", label: "Happy Guests" },
+  { icon: MapPin, value: "Dubai", label: "Premium Location" },
+  { icon: Award, value: "12+", label: "Years Experience" },
+  { icon: Clock, value: "24/7", label: "WhatsApp Support" },
 ];
 
 const AboutSection = () => {
@@ -15,21 +15,21 @@ const AboutSection = () => {
           {/* Content */}
           <div>
             <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-              About Us
+              About Visit White Desert
             </span>
             <h2 className="text-4xl font-bold mt-2 mb-6">
-              Your Gateway to Unforgettable Desert Adventures
+              Dubai's Premier Desert Safari Experience
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Since 2010, we've been crafting extraordinary desert experiences that blend 
-              adventure, culture, and luxury. Our expert guides and premium services ensure 
-              every journey becomes a cherished memory.
+              Since 2012, Visit White Desert has been crafting extraordinary desert experiences 
+              in the heart of Dubai. Our expert guides and premium services have made us the 
+              top choice for travelers seeking authentic Arabian adventures.
             </p>
             <p className="text-muted-foreground mb-8">
-              From thrilling dune bashing to serene sunset camps, we offer a range of 
-              experiences tailored to every type of traveler. Whether you're seeking 
-              adrenaline-pumping activities or peaceful desert retreats, we have the 
-              perfect adventure waiting for you.
+              From thrilling dune bashing in luxury Land Cruisers to enchanting belly dance 
+              performances and traditional BBQ dinners under the stars – we offer the complete 
+              Dubai desert experience. Whether you're seeking adrenaline-pumping adventures or 
+              peaceful sunset moments, we have the perfect package for you.
             </p>
             
             {/* Stats Grid */}
@@ -51,24 +51,24 @@ const AboutSection = () => {
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&h=300&fit=crop"
-                alt="Desert landscape"
+                alt="Dubai desert dunes"
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
                 src="https://images.unsplash.com/photo-1542401886-65d6c61db217?w=400&h=400&fit=crop"
-                alt="Camel ride"
+                alt="Camel ride in Dubai"
                 className="rounded-lg w-full h-64 object-cover"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=400&h=400&fit=crop"
-                alt="Desert camp"
+                alt="Dubai desert camp"
                 className="rounded-lg w-full h-64 object-cover"
               />
               <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop"
-                alt="Sunset view"
+                src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=400&h=300&fit=crop"
+                alt="Dubai sunset view"
                 className="rounded-lg w-full h-48 object-cover"
               />
             </div>

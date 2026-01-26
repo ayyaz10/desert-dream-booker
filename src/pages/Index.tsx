@@ -10,7 +10,14 @@ import CTASection from "@/components/safari/CTASection";
 
 import { safariPackages } from "@/data/safariPackages";
 
+const WHATSAPP_NUMBER = "971501234567";
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Dubai Desert Safari with Visit White Desert. Can you help me?";
+
 const Index = () => {
+  const openWhatsApp = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -29,9 +36,9 @@ const Index = () => {
             <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
               Our Packages
             </span>
-            <h2 className="text-4xl font-bold mt-2 mb-4">Choose Your Adventure</h2>
+            <h2 className="text-4xl font-bold mt-2 mb-4">Choose Your Dubai Adventure</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From sunrise thrills to starlit nights – find the perfect desert experience.
+              From sunrise thrills to starlit nights – find the perfect Dubai desert experience.
             </p>
           </div>
           
@@ -60,9 +67,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">🏜️ Desert Safari Adventures</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                <span className="text-amber-500">Visit</span>White<span className="text-amber-400">Desert</span>
+              </h3>
               <p className="text-background/70 mb-4 max-w-md">
-                Creating unforgettable desert experiences since 2010. Licensed and insured for your peace of mind.
+                Dubai's premier desert safari experience since 2012. Licensed by Dubai Tourism and insured for your peace of mind.
               </p>
             </div>
             <div>
@@ -77,14 +86,20 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Contact Us</h4>
               <ul className="space-y-2 text-background/70">
-                <li>📞 +1 234 567 8900</li>
-                <li>✉️ info@desertsafari.com</li>
+                <li>📞 +971 50 123 4567</li>
+                <li>✉️ info@visitwhitedesert.com</li>
                 <li>📍 Dubai, UAE</li>
               </ul>
+              <button 
+                onClick={openWhatsApp}
+                className="mt-4 inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+              >
+                💬 WhatsApp Us
+              </button>
             </div>
           </div>
           <div className="border-t border-background/20 pt-8 text-center text-background/60 text-sm">
-            <p>© 2024 Desert Safari Adventures. All rights reserved.</p>
+            <p>© 2024 Visit White Desert. All rights reserved. | Dubai Desert Safari Tours</p>
           </div>
         </div>
       </footer>

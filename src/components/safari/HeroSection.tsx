@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Play } from "lucide-react";
+import heroVideo from "@/assets/dubai-desert-hero.mp4";
 
-const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
-const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Desert Safari. Can you help me?";
+const WHATSAPP_NUMBER = "971501234567"; // Dubai WhatsApp number
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Dubai Desert Safari with Visit White Desert. Can you help me?";
 
 const HeroSection = () => {
   const scrollToPackages = () => {
@@ -16,12 +17,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1920&q=80')`,
-        }}
-      />
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
+      </div>
       
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-10 w-20 h-20 rounded-full bg-amber-500/20 blur-xl animate-pulse" />
@@ -29,17 +37,17 @@ const HeroSection = () => {
       
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <span className="inline-block px-4 py-2 bg-amber-500/20 text-amber-300 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
-          🌟 Rated #1 Desert Experience in Dubai
+          🌟 Dubai's #1 Rated Desert Safari Experience
         </span>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
-          Discover the
-          <span className="block text-amber-400">Magic of the Desert</span>
+          Experience the
+          <span className="block text-amber-400">Dubai Desert Magic</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Embark on an extraordinary journey through golden dunes, experience thrilling adventures, 
-          and witness breathtaking sunsets in the heart of Arabia.
+          Embark on an extraordinary journey through Dubai's majestic golden dunes. 
+          Thrilling dune bashing, mesmerizing belly dance, authentic BBQ dinner, and unforgettable sunsets await.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -68,10 +76,10 @@ const HeroSection = () => {
             <span className="text-amber-400">✓</span> 50,000+ Happy Travelers
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-amber-400">✓</span> 4.9/5 Average Rating
+            <span className="text-amber-400">✓</span> 4.9/5 TripAdvisor Rating
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-amber-400">✓</span> Free Cancellation
+            <span className="text-amber-400">✓</span> Free Hotel Pickup
           </div>
         </div>
       </div>
