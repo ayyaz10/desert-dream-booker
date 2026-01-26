@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
+
+const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Desert Safari. Can you help me?";
 
 const CTASection = () => {
-  const scrollToBooking = () => {
-    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.open(url, '_blank');
   };
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section id="booking" className="py-20 px-4 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -25,17 +29,18 @@ const CTASection = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            onClick={scrollToBooking}
+            onClick={openWhatsApp}
             size="lg" 
-            className="bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-6 text-lg"
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-6 text-lg"
           >
-            Book Your Safari
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <MessageCircle className="mr-2 w-5 h-5" />
+            Book via WhatsApp
           </Button>
           <Button 
             size="lg" 
             variant="outline"
             className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg"
+            onClick={() => window.open(`tel:+${WHATSAPP_NUMBER}`, '_self')}
           >
             <Phone className="mr-2 w-5 h-5" />
             Call Us Now

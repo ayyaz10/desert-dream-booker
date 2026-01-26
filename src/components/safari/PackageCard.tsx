@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ShoppingCart } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
 
 export interface SafariPackage {
   id: string;
@@ -15,11 +15,17 @@ export interface SafariPackage {
 
 interface PackageCardProps {
   pkg: SafariPackage;
-  onAddToCart: (pkg: SafariPackage) => void;
-  isInCart: boolean;
 }
 
-const PackageCard = ({ pkg, onAddToCart, isInCart }: PackageCardProps) => {
+const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
+
+const PackageCard = ({ pkg }: PackageCardProps) => {
+  const openWhatsApp = () => {
+    const message = `Hi! I'm interested in the ${pkg.name} package ($${pkg.price}). Can you help me book?`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <Card className={`relative overflow-hidden transition-all duration-300 hover:shadow-xl ${pkg.popular ? 'border-amber-500 border-2' : ''}`}>
       {pkg.popular && (
@@ -49,12 +55,11 @@ const PackageCard = ({ pkg, onAddToCart, isInCart }: PackageCardProps) => {
       <CardFooter className="flex justify-between items-center">
         <div className="text-3xl font-bold text-amber-600">${pkg.price}</div>
         <Button
-          onClick={() => onAddToCart(pkg)}
-          disabled={isInCart}
-          className={isInCart ? 'bg-green-600 hover:bg-green-600' : 'bg-amber-500 hover:bg-amber-600 text-black'}
+          onClick={openWhatsApp}
+          className="bg-green-500 hover:bg-green-600 text-white"
         >
-          <ShoppingCart className="h-4 w-4 mr-2" />
-          {isInCart ? 'Added' : 'Add to Cart'}
+          <MessageCircle className="h-4 w-4 mr-2" />
+          Book Now
         </Button>
       </CardFooter>
     </Card>

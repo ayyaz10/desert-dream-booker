@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { MessageCircle, Play } from "lucide-react";
+
+const WHATSAPP_NUMBER = "1234567890"; // Replace with actual number
+const WHATSAPP_MESSAGE = "Hi! I'm interested in booking a Desert Safari. Can you help me?";
 
 const HeroSection = () => {
   const scrollToPackages = () => {
     document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToBooking = () => {
-    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.open(url, '_blank');
   };
 
   return (
@@ -40,12 +44,12 @@ const HeroSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            onClick={scrollToBooking}
+            onClick={openWhatsApp}
             size="lg" 
-            className="bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-6 text-lg group"
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-6 text-lg group"
           >
-            Book Your Adventure
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <MessageCircle className="mr-2 w-5 h-5" />
+            Book via WhatsApp
           </Button>
           <Button 
             onClick={scrollToPackages}

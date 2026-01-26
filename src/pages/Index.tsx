@@ -7,18 +7,14 @@ import GallerySection from "@/components/safari/GallerySection";
 import TestimonialsSection from "@/components/safari/TestimonialsSection";
 import FAQSection from "@/components/safari/FAQSection";
 import CTASection from "@/components/safari/CTASection";
-import BookingForm from "@/components/safari/BookingForm";
-import CartDrawer from "@/components/safari/CartDrawer";
+
 import { safariPackages } from "@/data/safariPackages";
-import { useCart } from "@/hooks/useCart";
 
 const Index = () => {
-  const { cart, addToCart, removeFromCart, clearCart, isInCart } = useCart();
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <CartDrawer cart={cart} onRemove={removeFromCart} onClear={clearCart} />
       
       <HeroSection />
       
@@ -44,8 +40,6 @@ const Index = () => {
               <PackageCard
                 key={pkg.id}
                 pkg={pkg}
-                onAddToCart={addToCart}
-                isInCart={isInCart(pkg.id)}
               />
             ))}
           </div>
@@ -60,22 +54,6 @@ const Index = () => {
       
       <CTASection />
 
-      {/* Booking Form Section */}
-      <section id="booking" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">
-              Book Now
-            </span>
-            <h2 className="text-4xl font-bold mt-2 mb-4">Reserve Your Safari</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready for adventure? Fill out the form below and we'll arrange everything for you.
-            </p>
-          </div>
-          
-          <BookingForm />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-16 px-4">
